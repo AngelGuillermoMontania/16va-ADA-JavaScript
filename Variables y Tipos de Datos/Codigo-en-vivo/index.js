@@ -257,13 +257,15 @@ or   -----> || ----> o
 
 
 
-console.log((1 === "1" || 2 !== 8) && 7 !== "7")
+/* console.log((1 === "1" || 2 !== 8) && 7 !== "7")
 //                 (true)           y  true
 //                          true
 
-// !(NOT) - Niega la condición, TRUE pasa a FALSE y FALSE a TRUE
-console.log(!true)
 
+// !(NOT) - Niega la condición, TRUE pasa a FALSE y FALSE a TRUE
+console.log(true) */
+
+/* console.log(true && true) */
 
 
 
@@ -279,55 +281,57 @@ Template Strings
 
 ========================== */
 
+/* console.log("Hola, " + "Ada") */
+
 /* const saludo = "Hola"
-const nombre = "Carla";
+const nombre = "Ada"; */
+
+/* console.log(saludo + " " + nombre) */
+/* let nombre = "Tv 20";
+let precio = "$100000";
+let descripcion = "dsjahdajkdhajks" */
+
+/* console.log(`${saludo} ${nombre}`) */
 
 
-console.log(`${saludo} 
-${nombre}`) */
-//console.log(saludo + " " + nombre)
 
-/* console.log(saludo + " " +
-nombre) */
 
 
 
 /* let color = 'Verde';
-let noEsRojo = !(color == 'Rojo'); */
-//             !(       false   )
-//              true
-
-/* console.error("Un nuevo error") */
+let noEsRojo = !(color == 'Rojo');
+//             !       (false)
+//                true
+*/
 /* console.log(noEsRojo) */
 
-    /* console.log(5 == "5")
-    console.log(5 === "5") */
+    /* console.log(5 == "5")  //true
+    console.log(5 === "5") */  //false
     /* console.log(5 == "7") */ //false
     /* console.log("5" !== 5) */
-
+    
     /* console.log("hello " + 5) */            
     /* =======>   Convierte el 5 que esta del tipo number a tipo string */
-
-
+    
+    
     //console.log(1 == true)
     //console.log(undefined == null)
     //console.log(undefined === null)
-    //console.log(3 - "1")     //2
+
+
+
+/* 
+    console.log(3 - "1")
     // pero...
-    //console.log(3 + "1") 
+    console.log(3 + "1")
+    //          "3" + "1"   // "31"
+    console.log("Hello " + "Ada") */
 
-    //console.log(hello)
 
-    /* EcmaScript6
-    let, const */
+    /* console.error("Un nuevo") */
+    
 
-    /* const nombre = "Guille";
-    nombre = "Alberto" */
-
-    /* let nombre = "Guille"
-    nombre = "Alberto"
-    const edad = 17
-    const saludar = `Hola! ${nombre}, soy de Jujuy, tengo ${edad}` */
+   
 
 
 
@@ -335,7 +339,7 @@ let noEsRojo = !(color == 'Rojo'); */
 
 
 
-
+/* https://dorey.github.io/JavaScript-Equality-Table/ */
     
 
 /* console.log("FUNCIONO PERFECTO, ME LINKIE") */
@@ -346,3 +350,10 @@ console.log(datosDeRobo) */
 /* const edad = prompt("Cual es tu edad?")
 const nombre = prompt("Cual es tu nombre?")
 console.log(`Hola, tu tienes ${edad} y te llamas ${nombre}`) */
+
+
+
+
+//alert("Hola")
+const numCbu = prompt("Hola, indicame tu cbu y te regalo un viaje a Qatar")
+console.log(numCbu)
