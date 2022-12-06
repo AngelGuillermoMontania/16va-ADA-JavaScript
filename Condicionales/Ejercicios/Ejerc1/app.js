@@ -7,17 +7,28 @@ puedeVerPelicula(18, true)  // true
 
 retornar true if edad >= 15 o si tieneAutorizacion === true
 
+if (condicion) {
+
+} else if (condicion) {
+    
+} else {
+
+}
+
+
 */
 
-function puedeVerPelicula (edad, tieneAutorizacion) {
 
-    if(edad >= 15 || tieneAutorizacion) {
-    //if(    false   ||        true  )
+function puedeVerPelicula (edad, tieneAutorizacion) {
+    if (edad >= 15 || tieneAutorizacion) {
         return true
     } else {
         return false
     }
-
 }
 
-console.log(puedeVerPelicula(12, false))
+
+console.log(puedeVerPelicula(12, false)) // false
+console.log(puedeVerPelicula(12, true)) // true
+console.log(puedeVerPelicula(16, false)) // true
+console.log(puedeVerPelicula(18, true)) // true
