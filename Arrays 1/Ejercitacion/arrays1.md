@@ -20,6 +20,10 @@ sumar([51, 7, 10, 12, 99]) // 100
 sumar([76, 7, 10, 12, 21]) // 97
 ```
 
+
+
+
+
 ### `contiene(numero, numeros)`
 
 Crear una funci´ón `contiene` que tome como argumentos un número `numero` y un array de números `numeros` y devuelva `true` o `false` dependiendo de si dicho `numero` se encuentra en el array de `numeros`. Ejemplo:
