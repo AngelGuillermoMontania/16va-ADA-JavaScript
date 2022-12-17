@@ -11,6 +11,7 @@ function obtenerIndice(valor, array) {
         if(array[index] === valor) {
             return index // 2
         }
+        //index += 1
     }
     return -1
 }

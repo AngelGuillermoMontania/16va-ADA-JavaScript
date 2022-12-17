@@ -14,7 +14,6 @@ function sumarImparesHasta (numero) {
             suma += index
         }
     }
-    // suma = 9
     return suma
 }
 
