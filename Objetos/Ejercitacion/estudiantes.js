@@ -8311,6 +8311,7 @@ const estudiantes = [
   },
 ];
 
+document.query
 
 // 001
 //estudiantesPorHechizo, que tome por parámetro el nombre de un hechizo y un array de estudiantes y devuelva un array con todos les estudiantes que tengan ese hechizo como hechizoPreferido
