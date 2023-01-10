@@ -4,7 +4,7 @@ Previamente a cada ejercicio, corroborar el correcto linkeo de html con js, medi
 
 ## DOM Basico
 ### *Ejercicio 1*
-Mediante un `alert`, pedir el nombre completo, y mostrar el nombre ingresado en el html con js usando `querySelector`, usar una etiqueta de texto a eleccion.
+Mediante un `prompt`, pedir el nombre completo, y mostrar el nombre ingresado en el html con js usando `querySelector`, usar una etiqueta de texto a eleccion.
 
 ### *Ejercicio 2*
 Agregar una etiqueta `h1` que diga: `Hola, este color lo agregue con js`, y colocarle el color `red` con js
@@ -28,7 +28,7 @@ const datos = {
 };
 ```
 mostrar en el html un saludo, utilizando el objeto:
-Ejemplo: `Hola, soy Ada Lovelace, mi email es ada.lovelace@gmail.com, mi edad es 29 años y mi identificador unico es 1`
+Ejemplo: `Hola, soy ${datos.nombre}, mi email es ${datos.email}, mi edad es 29 años y mi identificador unico es 1`
 
 ### *Ejercicio 6*
 Dado el siguiente array de objetos:
