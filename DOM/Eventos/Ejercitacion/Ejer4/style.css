@@ -1,0 +1,16 @@
+.body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.modo {
+    background-color: black;
+    border: none;
+    color: white;
+    box-shadow: 0 0 15px 5px gray;
+    border-radius: 5px;
+}
+
+.dark {
+    background-color: black;
+}
