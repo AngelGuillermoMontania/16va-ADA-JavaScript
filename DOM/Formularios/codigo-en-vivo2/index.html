@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <button id="create-modal">Create</button>
+    <div class="contain-modalCreate">
+        <form class="form">
+            <button type="button" id="close-modal">X</button>
+            <div>
+                <input id="title" type="text" placeholder="Titulo de tarea">
+                <span id="titleErrors"></span>
+            </div>
+            <select id="state">
+                <option disabled selected>Seleccione un estado</option>
+                <option>Pendiente</option>
+                <option>En progreso</option>
+                <option>Terminado</option>
+            </select>
+            <span id="stateErrors"></span>
+            <button type="submit" class="submit">Crear</button>
+        </form>
+        <span id="formErrors"></span>
+    </div>
+    
+    
+    <script src="./js/main1.js"></script>
+</body>
+</html>
