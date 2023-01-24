@@ -44,3 +44,8 @@ form .submit {
 .show-modal {
     display: flex;
 }
+
+#formErrors {
+    position: absolute;
+    bottom: 35px;
+}

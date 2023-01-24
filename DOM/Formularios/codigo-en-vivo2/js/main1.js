@@ -30,14 +30,27 @@ window.addEventListener("load", () => {
         $modal.classList.remove("show-modal")
     })
 
+
+
     /* Validacion Formulario */
 
-    let validationErrors = false
-
     $form.addEventListener("submit", (event) => {
+
+        console.log("Hice click en Crear")
+
+        // Prevengo el comportamiento por default
         event.preventDefault()
+
+        //Una variable que llevara el control de los errors
         let errors = false
-        if($title.value.length <= 5) {
+        // Si tengo errores llegara al final con true
+        // Si NO tengo errores llegara al final con false
+
+        console.log("Errors esta en antes de validar", errors)
+        console.log($title.value)
+
+        // Validacion titulo
+        if($title.value.length <= 5) { // Si entra en el if hay un error
             $titleErrors.innerText = "Necesito mas de 5 caracteres"
             $titleErrors.style.color = "red";
             $titleErrors.style.fontSize = "10px";
@@ -46,11 +59,27 @@ window.addEventListener("load", () => {
             $titleErrors.innerText = ""
         }
 
+        console.log("Errors esta en dspues de validar titulo", errors)
+        console.log($state.value)
+
+        // Validacion estado 
+        if($state.value == "") { // Si entra en el if hay un error en estado
+            $stateErrors.innerText = "No seleccionaste ningun estado"
+            $stateErrors.style.color = "red";
+            $stateErrors.style.fontSize = "10px";
+            errors = true
+        } else {
+            $stateErrors.innerText = ""
+        }
+        console.log("Errors esta en dspues de validar estado", errors)
+        // primer prueba error = true
+
+
+        // errors = false si no hay errores
+        // errors = true, por que si hay errores
 
         if(errors) {
-            /* no hagas nada */
-        } else {
-            /* Ahora si guardalo o submiteo */
+            console.log("AUN TENEMOS ERRORES")
         }
     })
 

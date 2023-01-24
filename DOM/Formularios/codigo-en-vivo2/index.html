@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,19 +16,20 @@
                 <input id="title" type="text" placeholder="Titulo de tarea">
                 <span id="titleErrors"></span>
             </div>
-            <select id="state">
-                <option disabled selected>Seleccione un estado</option>
-                <option>Pendiente</option>
-                <option>En progreso</option>
-                <option>Terminado</option>
-            </select>
-            <span id="stateErrors"></span>
+            <div>
+                <select id="state">
+                    <option value="" disabled selected>Seleccione un estado</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En progreso">En progreso</option>
+                    <option value="Terminado">Terminado</option>
+                </select>
+                <span id="stateErrors"></span>       
+            </div>
             <button type="submit" class="submit">Crear</button>
         </form>
         <span id="formErrors"></span>
     </div>
     
-    
-    <script src="./js/main1.js"></script>
+    <script src="./js/main2.js"></script>
 </body>
 </html>
