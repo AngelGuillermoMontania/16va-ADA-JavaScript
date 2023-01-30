@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>App Tareas</h1>
+        <button id="btn-darkMode">☽</button>
+    </header>
+    <section class="section-create">
+        <button id="open-modal">Crear</button>
+        <div>
+            <button id="btn-filterPendient">Pendiente</button>
+            <button id="btn-filterInProgress">En progreso</button>
+            <button id="btn-filterFinish">Terminado</button>
+            <button id="btn-all">TODOS</button>
+        </div>
+        <section class="contain-modal">
+            <div class="modal">
+                <button id="close-modal">X</button>
+                <form class="form">
+                    <div>
+                        <input id="title" type="text" placeholder="Titulo de tarea">
+                        <span id="titleErrors"></span>
+                    </div>
+                    <div>
+                        <select id="state">
+                            <option value="" disabled selected>Seleccione un estado</option>
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="En progreso">En progreso</option>
+                            <option value="Terminado">Terminado</option>
+                        </select>
+                        <span id="stateErrors"></span>       
+                    </div>
+                    <button type="submit" class="submit">Crear</button>
+                </form>
+            </div>
+        </section>
+    </section>
+    <main>
+        <section class="contain-tareas">
+            <!-- <div class="card">
+                <p>Titulo</p>
+                <p>Estado</p>
+                <button>Editar</button>
+                <button>Eliminar</button>
+            </div> -->
+        </section>
+    </main>
+
+    <script src="./js/main2.js"></script>
+</body>
+</html>

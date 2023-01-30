@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+main {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main section {
+    width: 30%;
+    border: 1px black solid;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contain-modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.505);
+    top: 0;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1.5s ease-in-out;
+}
+
+.contain-modal .modal {
+    height: 20rem;
+    width: 10rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px black solid;
+    position: absolute;
+    top: 25%;
+    left: 42%;
+    box-shadow: 0px 0px 15px 0 white;
+}
+
+.show-modal {
+    pointer-events: all;
+    opacity: 1;
+    transition: all 1.5s ease-in-out;
+}
+
+#btn-darkMode {
+    width: 2rem;
+    height: 2rem;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode main section {
+    border: 1px white solid;
+}

@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: black;
+    left: -200px;
+    transition: all 500ms linear;
+    box-shadow: 0 0 15px 15px black;
+}
+
+
+.sidebar ul li {
+    color: rgba(230, 230, 230, .9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, .3);
+    text-align: center;
+}
+
+.logo {
+    border-radius: 5%;
+    display: block;
+    margin: 0 auto;
+    height: 4rem;
+    width: 7rem;
+}
+
+.sidebar .toggle-btn {
+    position: absolute;
+    left: 230px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.sidebar .toggle-btn span {
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+    border: 3px solid blue;
+    transition: all 500ms linear;
+}
+
+.show-sidebar {
+    left: 0px;
+}
