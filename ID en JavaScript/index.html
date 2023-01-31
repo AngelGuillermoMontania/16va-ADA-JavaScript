@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/css/style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+    <button id="create-modal">Create</button>
+    <section class="contain-modalCreate">
+        <div class="modal">
+            <form class="form">
+                <button type="button" id="close-modalCreate">X</button>
+                <div>
+                    <input id="title" type="text" placeholder="Titulo de tarea">
+                    <span id="titleErrors"></span>
+                </div>
+                <div>
+                    <select id="state">
+                        <option value="" disabled selected>Seleccione un estado</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="En progreso">En progreso</option>
+                        <option value="Terminado">Terminado</option>
+                    </select>
+                    <span id="stateErrors"></span>       
+                </div>
+                <button type="submit" class="submit">Crear</button>
+            </form>
+            <span id="formErrors"></span>
+        </div>
+    </section>
+    <section class="contain-modalEdit">
+        <div class="modal">
+            <form class="form">
+                <button type="button" id="close-modalEdit">X</button>
+                <div>
+                    <input id="titleEdit" type="text" placeholder="Titulo de tarea">
+                    <span id="titleErrors"></span>
+                </div>
+                <div>
+                    <select id="stateEdit">
+                        <option value="" disabled selected>Seleccione un estado</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="En progreso">En progreso</option>
+                        <option value="Terminado">Terminado</option>
+                    </select>
+                    <span id="stateErrors"></span>       
+                </div>
+                <button type="submit" class="submit">Editar</button>
+            </form>
+            <span id="formErrors"></span>
+        </div>
+    </section>
     <section class="contain-tareas">
 
     </section>

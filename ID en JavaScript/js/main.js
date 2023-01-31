@@ -25,6 +25,33 @@ let tareas = [
 window.addEventListener("load", () => {
 
     const $section = $(".contain-tareas")
+
+    const $titleEdit = $("#titleEdit")
+    const $stateEdit = $("#stateEdit")
+
+    /* Modal */
+    const $openModal = $("#create-modal")
+    const $closeModalCreate = $("#close-modalCreate")
+    const $closeModalEdit = $("#close-modalEdit")
+    const $modalCreate = $(".contain-modalCreate")
+    const $modalEdit = $(".contain-modalEdit")
+
+    /* Eventos Modal */
+    $openModal.addEventListener("click", () => {
+        $modalCreate.classList.add("show-modalCreate")
+    })
+
+    $closeModalCreate.addEventListener("click", () => {
+        $modalCreate.classList.remove("show-modalCreate")
+    })
+
+    $closeModalEdit.addEventListener("click", () => {
+        $modalEdit.classList.remove("show-modalEdit")
+    })
+
+
+
+
     
     const paint = (nodo, array) => {
         nodo.innerHTML = ""
@@ -33,8 +60,11 @@ window.addEventListener("load", () => {
                 <p>${element.Titulo}</p>
                 <p>${element.Estado}</p>
                 <button class="btn-delete" id=${element.id}>Eliminar</button>
+                <button class="btn-edit" id=${element.id}>Editar</button>
             </div>`
         });
+
+        /* Eliminacion */
         $btnDeleteTarea = document.querySelectorAll(".btn-delete")
         $btnDeleteTarea.forEach(button => {
             button.addEventListener("click", (e) => {
@@ -42,35 +72,18 @@ window.addEventListener("load", () => {
                 paint($section, tareas)
             })
         })
+
+        /* Edicion */
+        $btnEditTarea = document.querySelectorAll(".btn-edit")
+        $btnEditTarea.forEach(button => {
+            button.addEventListener("click", (e) => {
+                $modalEdit.classList.add("show-modalEdit")
+                const tareaAEditar = tareas.find(tarea => tarea.id === Number(e.target.id))
+                $stateEdit.value = tareaAEditar.Estado
+                $titleEdit.value = tareaAEditar.Titulo
+            })
+        })
     }
     
     paint($section, tareas)
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const saludos = ["Hola", "Chau"]
-const nombres = ["Angel", "Mel", "Ada"]
-
-for (let i = 0; i < saludos.length; i++) {
-    console.log(saludos[i])
-    for (let j = 0; j < nombres.length; j++) {
-        console.log(nombres[j])
-    }
-}
