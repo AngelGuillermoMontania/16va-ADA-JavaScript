@@ -4,20 +4,15 @@ function $ (elem) {
 
 let tareas = [
     {
-        id: 1,
+        id: "9966242f-edcc-4b23-803f-3d517cdfc75f",
         Titulo: "Estudiar Python",
         Estado: "Pendiente"
     },
     {
-        id: 5,
-        Titulo: "Aprender Angular",
-        Estado: "En progreso"
+        id: "9966242f-edcc-4b23-803f-3d51dsjkah47",
+        Titulo: "Estudiar Python",
+        Estado: "Pendiente"
     },
-    {
-        id: 6,
-        Titulo: "Aprender Angular",
-        Estado: "En progreso"
-    }
 ]
 
 
