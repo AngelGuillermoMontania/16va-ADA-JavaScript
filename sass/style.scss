@@ -1,0 +1,77 @@
+/* 
+Variables
+$color-primary: blue;
+$color-text-secondary: red;
+$width-card: 80px; */
+
+/*   IMPORT @import "./header"; */
+
+/* 
+Mixins
+@mixin styleCard ($bgColor: blue, $width: 350px) {
+    background-color: $bgColor;
+    width: 200px;
+    height: 350px;
+} */
+
+/* .contain-lista {
+    background-color: gray;
+    padding: 5px;
+
+    ul {
+        border: 1px solid black;
+
+        .primer-item {
+            color: $color-text-secondary;
+        }
+
+        .segundo-item {
+            color: $color-primary;
+        }
+
+    }
+} */
+
+/*
+Mixins
+.card {
+    @include styleCard($bgColor: gray)
+}
+
+.card-par {
+    @include styleCard()
+} */
+
+
+
+
+
+
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+@import 'vendors/bootstrap';
+@import 'vendors/jquery-ui';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
+
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/cover';
+@import 'components/dropdown';
+
+@import 'pages/home';
+@import 'pages/contact';
+
+@import 'themes/theme';
+@import 'themes/admin';
