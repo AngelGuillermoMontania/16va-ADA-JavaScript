@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: gray;
+    min-height: 100%;
+}
+
+.contain-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.contain-cards .card {
+    width: 20%;
+    background-color: black;
+    margin: 10px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.contain-cards .card:hover {
+    transform: scale(1.05);
+}
+
+.contain-cards .card img {
+    height: 30%;
+    width: 95%;
+
+}
+
+.contain-cards .card .contain-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}

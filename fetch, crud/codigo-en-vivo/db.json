@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "primero@gmail.com"
+    },
+    {
+      "id": 2,
+      "email": "segundo@gmail.com"
+    },
+    {
+      "email": "angtania@gmail.com",
+      "telefono": 434346547,
+      "id": 3
+    }
+  ]
+}
