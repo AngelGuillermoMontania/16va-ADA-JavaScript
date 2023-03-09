@@ -18,21 +18,27 @@ const $lastPage = $("#last-page")
 // Variables auxiliares
 let offset = 0
 let nameSearchCharacter = ""
+let type = "characters"
+let totalPokemons
 
 window.addEventListener("load", () => {
 
-    loadPokemons(`https://pokeapi.co/api/v2/pokemon`)
+    loadPokemons()
 
 })
 
 
 // Function fetch y llama a paint
-async function loadPokemons(url) {
+async function loadPokemons() {
+    
+    controlButtonsClass()
+
     try {
-        console.log(`${url}${"?offset=" + offset}${nameSearchCharacter}`)
-        const response = await fetch(`${url}${"?offset=" + offset}`)
+        // "https://pokeapi.co/api/v2/characters?offset=0"
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}`)
         // https://pokeapi.co/api/v2/pokemon/offset=0
         const pokemonsUrl = await response.json()
+        totalPokemons = pokemonsUrl.count
         const arrayFetchURLS = pokemonsUrl.results.map(pokemonUrl => fetch(pokemonUrl.url))
         const promiseAllDetail = await Promise.all(arrayFetchURLS)
         const data = await Promise.all(promiseAllDetail.map(detailPokemon => detailPokemon.json()))
@@ -69,11 +75,10 @@ $nextPage.addEventListener("click", () => {
 
     
 
-    if(offset + 20 < 1281) {
+    if(offset + 20 <= totalPokemons) {
         offset = offset + 20
         // page = page + 1
-        console.log(offset)
-        loadPokemons(`https://pokeapi.co/api/v2/pokemon`)
+        loadPokemons()
     }
 })
 
@@ -81,8 +86,24 @@ $previousPage.addEventListener("click", () => {
     if(offset > 0) {
         offset = offset - 20
         // page = page - 1
-        console.log(offset)
-        loadPokemons(`https://pokeapi.co/api/v2/pokemon`)
+        loadPokemons()
+    }
+})
+
+$initPage.addEventListener("click", () => {
+    if(offset != 0) {
+        offset = 0
+        // page = 1
+        loadPokemons()
+    }
+})
+
+$lastPage.addEventListener("click", () => {
+    if(offset + 20 <= totalPokemons) {
+        while(offset + 20 <= totalPokemons) {
+            offset += 20
+        }
+        loadPokemons()
     }
 })
 
@@ -96,10 +117,37 @@ const $btnSearch = $("#btn-search")
 
 $btnSearch.addEventListener("click", () => {
 
+    if($selectType.value = "Characters") {
+        type = "characters"
+    } else {
+        type = "comics"
+    }
+
     if($inputSearch.value === "") {
         nameSearchCharacter = ""
     } else {
         nameSearchCharacter = `&name=${$inputSearch.value}`
     }
-    loadPokemons("https://pokeapi.co/api/v2/pokemon")
+    loadPokemons()
 })
+
+function controlButtonsClass () {
+    if (offset < 20) {
+        $previousPage.classList.add("desactived")
+        $initPage.classList.add("desactived")
+    } else {
+        $previousPage.classList.remove("desactived")
+        $initPage.classList.remove("desactived")
+    }
+
+    if(offset + 20 > totalPokemons) {
+        $nextPage.classList.add("desactived")
+        $lastPage.classList.add("desactived")
+    } else {
+        $nextPage.classList.remove("desactived")
+        $lastPage.classList.remove("desactived")
+    }
+}
+
+
+//  Pregunto si es valida, en el caso de que sea valido paso a tal cual
